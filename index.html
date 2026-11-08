@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIPATIR — Pemantauan &amp; Pelaporan Irigasi (Prototipe PUPR)</title>
+<meta name="description" content="Prototipe PWA pemantauan irigasi: kamera ber-watermark GPS, peta per peran, tugas, persetujuan pengamat, dan rapor kinerja ASN.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#14458F">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0D1420">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SIPATIR">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" onerror="this.remove()">
+<link rel="stylesheet" href="css/style.css?v=15">
+</head>
+<body>
+
+  <!-- ============ LAYAR LOGIN ============ -->
+  <section id="screen-login" class="login-screen" hidden></section>
+
+  <!-- ============ CANGKANG APLIKASI ============ -->
+  <div id="shell" hidden>
+    <aside id="sidebar" aria-label="Menu samping">
+      <div class="sb-logo">
+        <img src="assets/icons/icon-192.png" alt="Logo SIPATIR">
+        <div class="sb-logo-txt"><b>SIPATIR</b><span>Pemantauan Irigasi</span></div>
+      </div>
+      <nav id="sb-nav"></nav>
+      <div class="sb-foot">
+        <button id="sb-theme" class="sb-theme" type="button"></button>
+        <div class="sb-footrow">
+          <button id="sb-user" class="sb-user" type="button"></button>
+          <button id="sb-logout" class="sb-logout" type="button" title="Keluar / Ganti peran" aria-label="Keluar"></button>
+        </div>
+      </div>
+    </aside>
+
+    <div id="frame">
+      <header id="topbar">
+        <div class="tb-left">
+          <img src="assets/icons/icon-192.png" alt="" class="tb-logo">
+          <b id="tb-title">Beranda</b>
+        </div>
+        <div class="tb-right">
+          <span id="tb-net" class="chip mini"><i class="net-dot ok"></i><span>Daring</span></span>
+          <button id="tb-theme" class="btn icon ghost" type="button" aria-label="Ganti tema"></button>
+          <button id="tb-ava" class="tb-ava" type="button" aria-label="Profil"><img alt=""></button>
+        </div>
+      </header>
+
+      <main id="main" class="page"></main>
+      <nav id="pillnav" aria-label="Navigasi utama"></nav>
+    </div>
+  </div>
+
+  <div id="sheet-root"></div>
+  <div id="modal-root"></div>
+  <div id="toast-root" aria-live="polite"></div>
+  <div id="print-sheet"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer onerror="window.__LEAFLET_FAIL=1"></script>
+  <script src="js/data.js?v=15" defer></script>
+  <script src="js/camera.js?v=15" defer></script>
+  <script src="js/map.js?v=15" defer></script>
+  <script src="js/rapor.js?v=15" defer></script>
+  <script src="js/app.js?v=15" defer></script>
+</body>
+</html>

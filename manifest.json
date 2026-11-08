@@ -1,0 +1,17 @@
+{
+  "name": "SIPATIR — Pemantauan & Pelaporan Irigasi",
+  "short_name": "SIPATIR",
+  "description": "Prototipe PWA pemantauan irigasi Ditjen Sumber Daya Air: kamera ber-watermark GPS, peta per peran, tugas, persetujuan, dan rapor kinerja ASN (data simulasi).",
+  "lang": "id",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#EEF2F8",
+  "theme_color": "#14458F",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
